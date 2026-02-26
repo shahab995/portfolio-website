@@ -1,241 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shahab | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Shahab | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #0f172a;
-      color: white;
-      transition: 0.4s;
-    }
-
-    .light-mode {
-      background: #f1f5f9;
-      color: #111;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 10%;
-      align-items: center;
-    }
-
-    nav h1 {
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    nav button {
-      padding: 8px 15px;
-      border: none;
-      cursor: pointer;
-      border-radius: 6px;
-      background: #3b82f6;
-      color: white;
-    }
-
-    section {
-      padding: 100px 10%;
-      text-align: center;
-    }
-
-      .hero {
-  min-height: 100vh;
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0.65)
-    ),
- url("images/shahabimage.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
 }
-    }
 
-    .hero span {
-      color: #3b82f6;
-    }
+body{
+  color:white;
+}
 
-    .hero p {
-      margin: 20px auto;
-      max-width: 600px;
-      opacity: 0.8;
-    }
+/* NAVBAR */
+nav{
+  position:absolute;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  z-index:2;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+nav h1{
+  font-size:24px;
+  font-weight:700;
+}
 
-    .primary {
-      background: #3b82f6;
-      color: white;
-    }
+nav button{
+  padding:8px 15px;
+  border:none;
+  border-radius:5px;
+  background:#3b82f6;
+  color:white;
+  cursor:pointer;
+}
 
-    .secondary {
-      border: 2px solid #3b82f6;
-      color: #3b82f6;
-    }
+/* HERO SECTION */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 
-    .btn:hover {
-      transform: scale(1.1);
-    }
+  /* BACKGROUND IMAGE WITH DARK OVERLAY */
+  background:linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("shahabimage.jpg");
 
-    .projects {
-      background: rgba(255,255,255,0.05);
-    }
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
+.hero h2{
+  font-size:48px;
+  font-weight:800;
+}
 
-    .card {
-      background: rgba(255,255,255,0.08);
-      padding: 30px;
-      border-radius: 15px;
-      transition: 0.4s;
-    }
+.hero span{
+  color:#3b82f6;
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-      background: rgba(59,130,246,0.2);
-    }
-
-    .card h3 {
-      margin-bottom: 15px;
-    }
-
-    footer {
-      padding: 30px;
-      text-align: center;
-      opacity: 0.7;
-    }
-
-    @media(max-width: 768px){
-      .hero h2 {
-        font-size: 35px;
-      }
-    }
-  </style>
+.hero p{
+  margin-top:20px;
+  max-width:600px;
+  font-weight:300;
+  opacity:0.9;
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <h1>Shahab.dev</h1>
-    <button onclick="toggleMode()">Toggle Mode</button>
-  </nav>
+<nav>
+  <h1>Shahab</h1>
+  <button>Contact</button>
+</nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Hi, I'm <span>Shahab</span> 👋</h2>
-    <p>
-      Frontend Developer building modern responsive websites using HTML, CSS and JavaScript.
-    </p>
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn secondary">GitHub</a>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <h2>My Projects</h2>
-
-      <div class="project-grid">
-
-  <div class="card">
-    <h3>Royal Taste Website</h3>
-    <p>A modern restaurant website with clean UI and responsive design.</p>
-    <p><strong>Live:</strong> 
-      <a href="https://royaltaste.lovable.app" target="_blank" style="color:#3b82f6;">
-        royaltaste.lovable.app
-      </a>
-    </p>
-    <p><strong>Tech:</strong> HTML • CSS • Deployment</p>
-  </div>
-
-  <div class="card">
-    <h3>ElixaWear Fashion Store</h3>
-    <p>An elegant fashion brand website with stylish layout and smooth design.</p>
-    <p><strong>Live:</strong> 
-      <a href="https://elixawear.lovable.app" target="_blank" style="color:#3b82f6;">
-        elixawear.lovable.app
-      </a>
-    </p>
-    <p><strong>Tech:</strong> HTML • CSS • Responsive Design</p>
-  </div>
-
-  <div class="card">
-    <h3>Portfolio Website</h3>
-    <p>This personal developer portfolio deployed using GitHub & Vercel.</p>
-    <p><strong>Tech:</strong> HTML • CSS • Vercel</p>
-  </div>
-
-</div>
-
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>A modern responsive portfolio website deployed on Vercel.</p>
-        <p><strong>Tech:</strong> HTML • CSS</p>
-      </div>
-
-      <div class="card">
-        <h3>Coming Soon</h3>
-        <p>More powerful projects are on the way 🚀</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section>
-    <h2>About Me</h2>
-    <p style="max-width:700px; margin:20px auto;">
-      I am passionate about building impactful technology solutions. Currently learning advanced
-      web development and backend systems. My goal is to create software that solves real-world problems.
-    </p>
-  </section>
-
-  <!-- Contact -->
-  <section>
-    <h2>Contact Me</h2>
-    <p>Let's build something amazing together.</p>
-    <a href="mailto:YOUR_EMAIL@gmail.com" class="btn primary">Send Email</a>
-  </section>
-
-  <footer>
-    © 2026 Shahab | Built with pure HTML & CSS
-  </footer>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle("light-mode");
-    }
-  </script>
+<section class="hero">
+  <h2>Hello, I'm <span>Shahab</span></h2>
+  <p>I build modern and responsive websites using HTML, CSS and JavaScript.</p>
+</section>
 
 </body>
 </html>
